@@ -47,7 +47,8 @@ class OAuthCallbackWebServer
 
 end
 
-client_secret_path = File.expand_path(File.dirname(__FILE__) + "/../credentials/client_secret.json")
+client_secret_path = File.expand_path(File.dirname(__FILE__) + "/./credentials/client_secret.json")
+
 $stdout.puts <<-EOS
 ########
 client_secret.json path を入力
@@ -70,7 +71,7 @@ $stdout.print(" path > ")
 path = $stdin.gets
 client_secret_path = path.to_s.strip unless path.to_s.strip.empty?
 
-token_path = File.expand_path(File.dirname(__FILE__) + "/../credentials/tokens.yaml")
+token_path = File.expand_path(File.dirname(__FILE__) + "/./credentials/tokens.yaml")
 $stdout.puts <<-EOS
 #########
 token.yml パスを指定
